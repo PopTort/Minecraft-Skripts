@@ -1,0 +1,46 @@
+# ================================================
+
+#     Admin Speed Script by PopTort :)
+#     No extra Addons Needed!
+#	Just the lastest version of Skript
+
+# =================================================
+
+
+
+
+
+command /speed [<number>]:
+
+    # Just some Command options
+    permission: admin.speed
+    permission message: Too lazy to walk ? Well suck it up buttercup
+    usage: &3/&bspeed &3<&bLevel&3>
+
+
+    trigger:
+	  #if player entered no argument
+        if arg-1 isn't set:
+
+		#check if in flight
+            if block below player is air:
+                set player's fly speed to 0.2
+                message "&3Your fly speed has been set back to &bNormal"
+                stop
+
+		#if not - change walk speed
+            set player's walk speed to 0.2
+            message "&3Your walk speed has been set back to &bNormal"
+            stop
+
+	  #if a number is given
+        if block below player is air:
+		
+		#check if player is in flight
+            set player's fly speed to arg-1
+            message "&3Your fly speed has been set to [ &b%arg-1% &3]"
+            stop
+
+	  #if not - change walk speed
+        set player's walk speed to arg-1
+        message "&3Your walk speed has been set to [ &b%arg-1% &3]"

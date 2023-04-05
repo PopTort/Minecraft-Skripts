@@ -1,0 +1,12 @@
+
+command /website:
+    trigger:
+        message "&bHere's a link to our website: <enter link here>"
+
+
+
+command /guide:
+    trigger:
+	  message ""
+	  message "This Can Say Whatever you Want Really"
+        message "<sgt:Some Hover Text><link:LINK_HERE> &bClick me for a Link! - Hover to see a message <reset>"
